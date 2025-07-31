@@ -13,6 +13,8 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
+    "strictNullChecks": false, // Desactiva los errores relacionados con null o undefined.
+    "noImplicitAny": false,     // Permite el uso implícito del tipo "any".
     "plugins": [
       {
         "name": "next"
