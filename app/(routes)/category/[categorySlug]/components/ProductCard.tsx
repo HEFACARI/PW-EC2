@@ -5,7 +5,7 @@
     DESCRIPCION: Este archivo muestra los productos dependiendo de la categoria en la que este
 */
 
-import { Expand, Heart, ShoppingCart } from "lucide-react"//Son componentes de íconos importados de la biblioteca lucide-react
+import { Expand, ShoppingCart } from "lucide-react"//Son componentes de íconos importados de la biblioteca lucide-react
 import { useRouter } from "next/navigation" //Es un hook que permite la navegación programática dentro de una aplicación Next.js
 import Link from "next/link" //Proporciona navegación entre páginas en aplicaciones Next.js sin recargar la página.
 

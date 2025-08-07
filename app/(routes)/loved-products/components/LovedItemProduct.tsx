@@ -14,7 +14,7 @@ import { formatPrice } from "@/lib/formatPrice"
 import { cn } from "@/lib/utils"
 import { ProductType } from "@/types/product"
 import { X } from "lucide-react"
-import { useRouter } from "next/navigation"
+//import { useRouter } from "next/navigation"
 
 interface LovedItemProductProps {
     product: ProductType
@@ -22,7 +22,7 @@ interface LovedItemProductProps {
 
 const LovedItemProduct = (props: LovedItemProductProps) => {
     const {product} = props //obtenemos los atributos del producto
-    const router = useRouter() //para navegar entre paginas
+    //const router = useRouter() //para navegar entre paginas
     const {addItem} = useCart() ////para añadir los productos favoritos al carrito de compras
     const {removeLovedItem} = UseLovedProducts() //para eliminar los productos favoritos
 

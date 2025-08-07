@@ -1,4 +1,3 @@
-import { Grid } from "lucide-react"
 import { Skeleton } from "./ui/skeleton"
 
 type skeletonSchemaProps = {

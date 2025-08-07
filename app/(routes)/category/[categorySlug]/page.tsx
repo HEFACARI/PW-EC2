@@ -13,7 +13,7 @@
 import { useGetCategoryProduct } from "@/api/GetCategoryProduct"
 import { Separator } from "@/components/ui/separator"
 import { ResponseType } from "@/types/response"
-import { useParams, useRouter } from "next/navigation"
+import { useParams } from "next/navigation"
 import FiltersControlsCategory from "./components/FiltersControlsCategory"
 import SkeletonSchema from "@/components/SkeletonSchema"
 import ProductCard from "./components/ProductCard"
@@ -24,13 +24,15 @@ import { useState } from "react"
 export default function Page() {
     const params = useParams()
     const categorySlug = params?.categorySlug; // Asegura que categorySlug no sea undefined
+
+    const {result, loading}: ResponseType = useGetCategoryProduct(categorySlug) //Datos traidos de una peticion mediante la API
+    
     const [filterOrigin, setFilterOrigin] = useState('')
     const [filterTaste, setFilterTaste] = useState('')
     
     if (!categorySlug) return <p>Categoría no encontrada</p>;
 
-    const {result, loading}: ResponseType = useGetCategoryProduct(categorySlug) //Datos traidos de una peticion mediante la API
-    const router = useRouter()
+    //const router = useRouter()
 
     // Combina ambos filtros en una sola lógica
     const filteredProducts = result != null && !loading && result.filter((product: ProductType) => {

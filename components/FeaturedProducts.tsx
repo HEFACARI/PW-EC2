@@ -30,7 +30,7 @@ const FeaturedProducts = () => {
 
                     {result != null ? (
                         result.map((product: ProductType) => {
-                            const {id, images, category, productName, slug, origin, taste} = product;
+                            const {id, images, productName, slug} = product;
 
 
                             return (
