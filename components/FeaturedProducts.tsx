@@ -22,7 +22,7 @@ const FeaturedProducts = () => {
     //const products = Array.isArray(result) ? result : [];
 
     return (
-        <div className="max-w-6xl py-4 sm:py-16 sm:px-24">
+        <div className="max-w-6xl py-4 ml-90 sm:py-16 sm:px-24 justify-center">
             <h3 className="px-6 text-3xl sm:pb-8">Productos Destacados</h3>
             <Carousel>
                 <CarouselContent className="-ml-2 md:-ml-4">
@@ -39,15 +39,15 @@ const FeaturedProducts = () => {
                                         <Card className="p-4 border border-gray-200 shadow-none">
                                             <CardContent className="relative flex items-center justify-center px-6 py-2">
                                                 {images && images.length > 0 ? (
-  <img
-    src={`${process.env.NEXT_PUBLIC_BACKEND_URL}${images[0].url}`}
-    alt={productName || "Producto destacado"}
-  />
-) : (
-  <div className="w-full h-40 bg-gray-100 flex items-center justify-center text-gray-500">
-    Imagen no disponible
-  </div>
-)}
+                                                    <img
+                                                        src={`${process.env.NEXT_PUBLIC_BACKEND_URL}${images[0].url}`}
+                                                        alt={productName || "Producto destacado"}
+                                                    />
+                                                    ) : (
+                                                    <div className="w-full h-40 bg-gray-100 flex items-center justify-center text-gray-500">
+                                                        Imagen no disponible
+                                                    </div>
+                                                    )}
 
                                                 <div className="absolute w-full px-6 transition duration-200 opacity-0 group-hover:opacity-100 bottom-5">
                                                     <div className="flex justify-center gap-x-6 mb-[-100]">
